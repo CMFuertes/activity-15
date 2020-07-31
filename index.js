@@ -20,12 +20,37 @@ inquirer.prompt([
     choices: ["Klingon", "Fax", "Messenger Pigeon", "Hiccups"],
     name: "communication",
 }
-  ])
-  .then(function(response) {
-      console.log(response);
-      fs.appendFile("log.text", JSON.stringify(response, null, 2)+ "\n", 'utf8', function(err, data){
-        if(err) return console.log(err);
-        console.log("written to log.txt");
-      });
+]).then(function(response){
+    console.log(response);
+    
+    // fs.appendFile("log.txt", JSON.stringify(response, null, 2) + "\n", 'utf8', function(err){
+    //     if(err) return console.log(err);
+    //     console.log("Written to log.txt");
+    // });
 
-  });
+    if(fs.existsSync("log.json")){
+        fs.readFile("log.json", 'utf8', function(err, data){
+            if(err) return console.log(err);
+
+            let jsondata = JSON.parse(data);
+            jsondata[response.username] = response;
+
+            writeMe(jsondata);
+        });
+    }
+    else{
+        let jsondata = {};
+        jsondata[response.username] = response;
+        // jsondata["key"] = data
+        writeMe(jsondata);
+    }
+
+});
+
+function writeMe(data){
+    fs.writeFile("log.json", JSON.stringify(data, null, 2), function(err){
+        if(err) return console.log(err);
+
+        console.log("SUCCESS... Hiccup");
+    });
+}

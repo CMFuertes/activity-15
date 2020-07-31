@@ -1,0 +1,27 @@
+{
+  "Hic": {
+    "username": "Hic",
+    "languages": [
+      "English",
+      "French"
+    ],
+    "communication": "Hiccups"
+  },
+  "Cristhal": {
+    "username": "Cristhal",
+    "languages": [
+      "English",
+      "French"
+    ],
+    "communication": "Messenger Pigeon"
+  },
+  "Ale": {
+    "username": "Ale",
+    "languages": [
+      "English",
+      "Japanese",
+      "Bulgarian"
+    ],
+    "communication": "Hiccups"
+  }
+}
