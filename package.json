@@ -1,0 +1,23 @@
+{
+  "name": "activity-15",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bob",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CMFuertes/activity-15.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CMFuertes/activity-15/issues"
+  },
+  "homepage": "https://github.com/CMFuertes/activity-15#readme",
+  "description": ""
+}
